@@ -47,18 +47,5 @@ services:
     depends_on:
       - server
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: demo-phpmyadmin
-    environment:
-      PMA_HOST: mysql
-      PMA_USER: ${MYSQL_USER:-appuser}
-      PMA_PASSWORD: ${MYSQL_PASSWORD:-apppass}
-    ports:
-      - "8081:80"
-    depends_on:
-      mysql:
-        condition: service_healthy
-
 volumes:
   mysql_data:
