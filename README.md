@@ -59,4 +59,8 @@ docker compose down -v
 - **Passwords are never stored in plain text** (they’re hashed).
 - **SSN is encrypted at rest** using the `SSN_KEY` you provide (the UI/API only shows last-4).
 
+## Deploy to Google Cloud
+
+See `docs/gcp-deploy.md`.
+
 
