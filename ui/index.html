@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Auth App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Demo Auth App</h1>
+        <p class="muted">Register once, then login next time and see your stored profile.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <button id="tab-login" class="tab active" type="button">Login</button>
+          <button id="tab-register" class="tab" type="button">Register</button>
+          <div class="spacer"></div>
+          <button id="btn-logout" class="ghost hidden" type="button">Logout</button>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <div id="panel-login">
+          <h2>Login</h2>
+          <form id="form-login" class="form">
+            <label>
+              Username
+              <input name="username" autocomplete="username" required />
+            </label>
+            <label>
+              Password
+              <input name="password" type="password" autocomplete="current-password" required />
+            </label>
+            <button class="primary" type="submit">Login</button>
+          </form>
+        </div>
+
+        <div id="panel-register" class="hidden">
+          <h2>Register</h2>
+          <form id="form-register" class="form">
+            <label>
+              Username
+              <input name="username" autocomplete="username" required />
+            </label>
+            <label>
+              Password (min 8 chars)
+              <input name="password" type="password" autocomplete="new-password" required />
+            </label>
+            <div class="grid-2">
+              <label>
+                First name
+                <input name="first_name" required />
+              </label>
+              <label>
+                Last name
+                <input name="last_name" required />
+              </label>
+            </div>
+            <label>
+              Address
+              <input name="address" required />
+            </label>
+            <label>
+              SSN
+              <input name="ssn" required />
+            </label>
+            <button class="primary" type="submit">Create account</button>
+          </form>
+        </div>
+
+        <div id="panel-profile" class="hidden">
+          <h2>Welcome</h2>
+          <p id="welcome" class="welcome"></p>
+          <div class="profile">
+            <div><span class="k">First name</span><span id="p-first" class="v"></span></div>
+            <div><span class="k">Last name</span><span id="p-last" class="v"></span></div>
+            <div><span class="k">Address</span><span id="p-address" class="v"></span></div>
+            <div><span class="k">SSN</span><span id="p-ssn" class="v"></span></div>
+          </div>
+
+          <div class="section">
+            <h3>Add two numbers</h3>
+            <form id="form-add" class="form">
+              <div class="grid-2">
+                <label>
+                  Number 1
+                  <input name="a" type="number" step="any" inputmode="decimal" required />
+                </label>
+                <label>
+                  Number 2
+                  <input name="b" type="number" step="any" inputmode="decimal" required />
+                </label>
+              </div>
+              <button class="primary" type="submit">Add</button>
+              <div id="add-result" class="result hidden"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer muted">
+        API: <code id="api-base"></code>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+

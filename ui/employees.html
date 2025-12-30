@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Employees</h1>
+        <p class="muted">Loaded from <code>/api/employees</code> (server calls upstream internally).</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <button id="btn-home" class="ghost" type="button">Home</button>
+          <div class="spacer"></div>
+          <button id="btn-refresh" class="ghost" type="button">Refresh</button>
+          <button id="btn-logout" class="ghost" type="button">Logout</button>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <div class="table-wrap">
+          <table class="table" aria-label="Employees">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody id="employees-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer muted">
+        API: <code id="api-base"></code>
+      </footer>
+    </main>
+
+    <script src="employees.js"></script>
+  </body>
+</html>
+
+
