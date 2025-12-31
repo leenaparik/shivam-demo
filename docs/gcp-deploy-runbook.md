@@ -219,4 +219,49 @@ While stopped, you may still be billed for:
 & $gcloud --quiet compute firewall-rules delete $FW_RULE
 ```
 
+---
+
+## What to tell Cursor next time (copy/paste instructions template)
+
+Fill in the `[...]` values.
+
+### 1) What you want built
+- “Build a Python web app with Register + Login. Registration collects: first_name, last_name, address, SSN, username, password. Store in MySQL. On login, fetch user details and show a welcome page.”
+- Optional extras (if needed):
+  - “Add API `/api/add` (query params) + UI form/page to call it and show the result.”
+  - “Add API `/api/employees` that calls `https://boringapi.com/api/v1/employees` internally and returns JSON.”
+  - “Add a new page `employees.html` that loads from `/api/employees` and displays employees in a table. Redirect to it after login.”
+
+### 2) Tech stack requirements
+- “UI must be Python-based (Flask) serving HTML/JS/CSS.”
+- “Server must be Python (Flask).”
+- “Database must be MySQL.”
+
+### 3) Containerization requirements
+- “Create 3 Docker containers (ui, server, mysql) using Docker Compose.”
+- “Expose ports: UI `[8080]`, API `[5000]`, DB `[3306]`.”
+- Optional: “Do NOT include phpMyAdmin.” (or “Include phpMyAdmin on `[8081]`.”)
+
+### 4) Repo + Git instructions
+- “Initialize git repo, add `.gitignore`, commit everything.”
+- “Set git identity: `user.name=[...]`, `user.email=[...]`.”
+- “Push to remote: `[https://github.com/<user>/<repo>.git]` on branch `main`.”
+
+### 5) Google Cloud deployment instructions
+- “Deploy to GCP Project ID: `[your-project-id]`.”
+- “Stay within free tier / trial credits.”
+- “Use Compute Engine `e2-micro` VM + Docker Compose on the VM.”
+- “Use zone `[us-central1-a]` (or my preferred zone `[ ... ]`).”
+- “Firewall policy: open ports `[8080,5000]` to `[my IP only]` or `[0.0.0.0/0]`.”
+- “Repo to deploy on VM: `[your repo URL]`.”
+- “Use a startup script to install Docker, create `.env`, and run Docker Compose.”
+- “Return the external IP URLs for UI + API health.”
+- “Stop the VM when done.”
+
+### 6) Your local environment details
+- “OS: Windows/macOS/Linux. Shell: PowerShell/bash.”
+- “Tools installed: Git `[yes/no]`, Google Cloud CLI `[yes/no]`, Docker Desktop `[yes/no]`.”
+- “I am logged into gcloud as `[email]`.”
+- “Workspace path is `[path]`.”
+
 
